@@ -25,15 +25,9 @@ function onImageClick(event) {
   if (!event.target.classList.contains("gallery__image")) {
     return;
   }
-  // window.addEventListener("keydown", onEscClick);
   event.preventDefault();
   const instance = basicLightbox.create(`
 	<img src="${event.target.dataset.source}">
 `);
   instance.show();
 }
-
-// body.addEventListener("keydown");
-// function onEscClick(event) {
-//   window.removeEventListener("keydown", instance.close());
-// }
